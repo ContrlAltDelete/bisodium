@@ -1,0 +1,58 @@
+generator: SerpuloPlanetGenerator       //Генератор планеты (Если не создаёте свой генератор, тогда не меняйте название)
+localizedName: "Vitrium"       //Название планеты
+parent: sun
+iconColor: 80a9ff      //Цвет иконки
+orbitRadius: 70       //Радиус орбиты
+hasAtmosphere: true       //Есть ли атмосфера?
+updateLighting: false
+atmosphereRadIn: 0.02
+atmosphereRadOut: 0.3
+atmosphereColor: 80a9ff      //Цвет атмосферы
+drawOrbit: false      //Рисовать орбиту? (false - не отрисовывать, true - отрисовывать)
+
+accessible: true      //Можно ли на неё приземлиться (Оставляйте всегда true, если не хотите чтобы планета была декоративной)
+alwaysUnlocked: true      //Всегда ли разблокированна? (Оставляйте всегда true, если не хотите чтобы планета была декоративной)
+defaultCore: "core-unity"       //Основное ядро (В данном случае Осколок). Можно создать своё ядро и указать здесь
+sectorSeed: 0       //Семя сектора
+startSector: 1      //Начальный сектор 
+sectorSize: 1       //Размер секторов
+
+clearSectorOnLose: true       //Очищать сектор после проигрыша? (true - да, false - нет)
+allowSectorInvasion: false      //Возможность атаки с вражеских секторов (true - будет атака с вражеских секторов, false - враги не будут атаковать соседние сектора)
+allowLaunchToNumbered: false      //Возможность приземляться на соседние сектора (true - как на Серпуло, false - как на Эрекире)
+
+//Отрисовка облаков
+//В этом туториале этого не будет, если хотите узнать подробнее пишите в комментариях
+cloudMesh: {
+  type: HexSkyMesh
+  planet: Vitrium
+  seed: 2
+  speed: 3
+  radius: 0.05
+  divisions: 5
+  color: 80a9ff
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+
+mesh: {
+    type: NoiseMesh
+    planet: Vitrium
+    seed: 562697
+    color1: 544deb
+    color2: 3f207d
+    divisions: 5
+    radius: 0.9
+    octaves: 7
+    persistence: 1
+    scl: 0.75
+    mag: 1.2
+}
+
+//Спрятанные предметы на планете
+//Если вам нужны ванильные предметы такие как Медь, Свинец, Бериллий - удалите все предметы из этого пункта
+ItemWhileList: [
+"sodium"
+]
