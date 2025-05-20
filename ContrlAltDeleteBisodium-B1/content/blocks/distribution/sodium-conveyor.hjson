@@ -1,0 +1,33 @@
+{
+  name: sodium Conveyor
+  description:transports items
+  category: distribution
+  speed: 0.1      //Скорость
+  displayedSpeed: 1     //Отображаемая скорость
+  health: 45
+  acceptsItems: true      //Может принимать предметы? Да
+  type: Conveyor
+  requirements: [
+    sodium/1
+]
+
+//К чему привязан
+research: {
+    parent: core-unity
+    requirements: [
+        sodium/5
+ ]
+}
+   destroyBullet: {
+          type: ExplosionBulletType
+          killShooter: false
+          splashDamage: 80
+          splashDamageRadius: 5
+          splashDamagePierce: true
+          hitSound: dullExplosion
+          despawnSound: dullExplosion
+          incendChance: 0.8
+          incendAmount: 6
+          incendSpread: 8
+        }
+}

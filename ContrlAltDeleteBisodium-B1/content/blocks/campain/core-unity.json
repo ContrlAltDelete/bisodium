@@ -1,0 +1,40 @@
+type: CoreBlock
+description:the very first core. It's weak. can be improved to the core Mezus
+name: core unity
+category: effect
+health: 1000
+size: 3
+
+itemCapacity: 2000          //Вместимость ядра
+unitCapModifier: 12          //На сколько увеличивает максимальное количество юнитов, которых можно построить
+unitType: "micron"
+incinerateNonBuildable: true        //Нельзя строить в игре (true - да нельзя, false - нет можно); Для первого ядра стоит ставить true
+isFirstTier: true           //Первое ядро? (У нас да, значит true)
+squareSprite: false             //Квадратный спрайт? (Ставьте false)
+
+//Что нужно для постройки (пока оставим пустым)
+requirements: [
+
+]
+
+
+//К чему прикрипленно? (в нашем случае к нашей планете)
+research: {
+    root: true
+    name: Vitrium
+	planet: Vitrium
+}
+
+alwaysUnlocked: true            //Всегда открыто? (для первого ядра всегда оставляем true)
+      destroyBullet: {
+          type: ExplosionBulletType
+          killShooter: false
+          splashDamage: 500
+          splashDamageRadius: 20
+          splashDamagePierce: true
+          hitSound: dullExplosion
+          despawnSound: dullExplosion
+          incendChance: 0.8
+          incendAmount: 6
+          incendSpread: 8
+        }
