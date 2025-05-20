@@ -2,10 +2,10 @@
 	"name": "bisodium",
 	"displayName": "bisodium",
 	"author": "ContrlAltDelete",
-	"description": "adds vitrium,blue planet",
+	"description": "This mod is very explosive.",
         "subtitle":RIP metaplanet 2024 - 07/05/25
 	"version": "Build 1",
-	"minGameVersion": 146,
+	"minGameVersion": 149,
 	"hidden": false
         "repo":ContrlAltDelete/bisodium
 }
